@@ -16,28 +16,59 @@ def q2():
     2. Verificação de Número Par/Ímpar: Crie um programa que pede ao usuário 
     um número e imprima se ele é par ou ímpar.
     """
-    print("par ")
-
+    num = int(input("Digite um número: "))
+    if num % 2 == 0:
+        print("par")
+    else:
+        print("ímpar")
 def q3():
     """
     3. Calculadora Simples: Faça uma calculadora que pede ao usuário dois 
     números e uma operação (+, -, *, /) e imprima o resultado dessa operação.
     """
-    pass
+    num1 = int(input("Digite um numero: "))
+    num2 = int(input("Digite outro numero: "))
+    operador = input("Digite um o operador: ")
+    match operador:
+        case "+":
+            resultado = num1 + num2
+        case "-":
+            resultado = num1 - num2
+        case "*":
+            resultado = num1 * num2
+        case "/":
+            resultado = num1 / num2
+    print(float(resultado))
 
 def q4():
     """
     4. Maior de Três Números: Escreva um programa que solicita três números 
     ao usuário e imprima o maior dentre eles.
     """
-    pass
+    num1 = float(input("Digite um numero: "))
+    num2 = float(input("Digite outro numero: "))
+    num3 = float(input("Digite outro numero: "))
+    if num1 > num2 and num1 > num3:
+        print(float(num1))
+    elif num2 > num1 and num2 > num3:
+        print(float(num2))
+    else:
+        print(float(num3))
 
 def q5():
     """
     5. Classificação de Idade: Peça a idade do usuário e imprima a classificação
     em "Criança" (0-12), "Adolescente" (13-19), "Adulto" (20-59) ou "Idoso" (60+).
     """
-    pass
+    idade = int(input("Digite sua idade: "))
+    if idade >= 60:
+        print("Idoso")
+    elif idade >= 20 and idade <= 59:
+        print("Adulto")
+    elif idade >= 13 and idade <= 19:
+        print("Adolescente")
+    else:
+        print("Criança")
 
 def q6():
     """
@@ -45,7 +76,17 @@ def q6():
     lados e verifique se eles podem formar um triângulo. Se sim, determine 
     se é um triângulo equilátero, isósceles ou escaleno.
     """
-    pass
+    A = int(input("Digite um numero: "))
+    B = int(input("Digite outro numero: "))
+    C = int(input("Digite outro numero: "))
+    if A > B + C or B > A + C or C > A + B: 
+        print("Inválido")
+    elif A == B and B == C:
+        print("Equilátero")
+    elif A != B and A != C and C != B:
+        print("Escaleno")
+    else:
+        print("Isósceles")
 
 def q7():
     """
@@ -53,7 +94,21 @@ def q7():
     de 0 a 100 em uma escala de conceitos: 
     A (90-100), B (80-89), C (70-79), D (60-69), E (50-59).e F (0-49)
     """
-    pass
+    nota = int(input("Digite sua nota: "))
+    match nota:
+        case x if x >= 90 and x <= 100:
+            print("A")
+        case x if x >= 80 and x <= 89:
+            print("B")
+        case x if x >= 70 and x <= 79:
+            print("C")
+        case x if x >= 60 and x <= 69:
+            print("D")
+        case x if x >= 50 and x <= 59:
+            print("E")
+        case x if x >= 0 and x <= 49:
+            print("F")
+        
 
 def q8():
     """
