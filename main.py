@@ -116,7 +116,12 @@ def q8():
     de usuário e uma senha. Se o nome de usuário for "admin" e a senha for 
     "12345", exiba "Acesso concedido", caso contrário, exiba "Acesso negado".
     """
-    pass
+    usuario = input("Digite o usuario: ")
+    senha = input("Digite sua senha: ")
+    if usuario == "admin" and senha == "12345":
+        print("Acesso concedido")
+    else:
+        print("Acesso negado")
 
 def q9():
     """
@@ -132,4 +137,8 @@ def q10():
     10. Verificação de Ano Bissexto: Escreva um programa que verifica 
     se um ano fornecido pelo usuário é bissexto ou não.
     """
-    pass
+    ano = int(input("Digite o ano"))
+    if ano % 4 == 0 and ano % 100 != 0:
+        print("bissexto")
+    else:
+        print("não")
