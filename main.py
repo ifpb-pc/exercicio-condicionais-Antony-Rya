@@ -130,7 +130,20 @@ def q9():
       indicando se a pessoa está: Abaixo do peso, Peso normal, Sobrepeso, 
       Obesa ou Muito obesa.
     """
-    pass
+    altura = float(input("Digite sua altura: "))
+    peso = float(input("Digite seu peso: "))
+    IMC = peso/altura**2
+    match IMC:
+        case x if x < 18.5:
+            print("Abaixo do peso")
+        case x if x >= 18.5 and x <= 24.9:
+            print("Peso normal")
+        case x if x >= 25 and x <= 29.9:
+            print("Sobrepeso")
+        case x if x >= 30 and x <= 34.9:
+            print("Obeso")
+        case x if x >= 35 and x <= 39.9:
+            print("Muito obeso")
 
 def q10():
     """
@@ -138,7 +151,7 @@ def q10():
     se um ano fornecido pelo usuário é bissexto ou não.
     """
     ano = int(input("Digite o ano"))
-    if ano % 4 == 0 and ano % 100 != 0:
+    if ano % 4 == 0:
         print("bissexto")
     else:
         print("não")
