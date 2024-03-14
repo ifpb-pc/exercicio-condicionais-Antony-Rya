@@ -79,7 +79,7 @@ def q6():
     A = int(input("Digite um numero: "))
     B = int(input("Digite outro numero: "))
     C = int(input("Digite outro numero: "))
-    if A > B + C or B > A + C or C > A + B: 
+    if A >= B + C or B >= A + C or C >= A + B: 
         print("Inválido")
     elif A == B and B == C:
         print("Equilátero")
@@ -106,7 +106,7 @@ def q7():
             print("D")
         case x if x >= 50 and x <= 59:
             print("E")
-        case x if x >= 0 and x <= 49:
+        case _:
             print("F")
         
 
@@ -151,7 +151,7 @@ def q10():
     se um ano fornecido pelo usuário é bissexto ou não.
     """
     ano = int(input("Digite o ano"))
-    if ano % 4 == 0:
+    if (ano % 4 == 0 and ano % 100 != 0) or (ano % 400 == 0):
         print("bissexto")
     else:
         print("não")
